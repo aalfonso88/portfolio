@@ -27,7 +27,7 @@ const Home = () => {
                         </p>
                     </div>
                     <nav className="home-nav">
-                        <Link to="/about">
+                        <Link to="#">
                             <button className="home-about-button">DISCOVER</button>
                         </Link>
                     </nav>
