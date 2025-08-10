@@ -1,10 +1,33 @@
 
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import me from '../assets/photos/me.png';
-import '../styles/home.css'; // Assuming you have a CSS file for styles
-import { Link } from 'react-router-dom';
+import '../styles/home.css';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+
+    const [loading, setLoading] = useState(false);
+    const navigate = useNavigate();
+    const timeoutRef = useRef<number | null>(null);
+
+    const handleClick = () => {
+        if (loading) return;
+        setLoading(true);
+
+        timeoutRef.current = window.setTimeout(() => {
+            navigate("/about");
+        }, 1500);
+    };
+
+
+    useEffect(() => {
+        return () => {
+            if (timeoutRef.current) {
+                window.clearTimeout(timeoutRef.current);
+            }
+        };
+    }, []);
+
     return (
         <main>
             <section className="home-container" aria-label="Profile overview">
@@ -27,9 +50,15 @@ const Home = () => {
                         </p>
                     </div>
                     <nav className="home-nav">
-                        <Link to="#">
-                            <button className="home-about-button">DISCOVER</button>
-                        </Link>
+                        <button
+                            type="button"
+                            className={`home-cta ${loading ? "is-loading" : ""}`}
+                            onClick={handleClick}
+                            disabled={loading}
+                        >
+                            <span className="home-cta__label">DISCOVER</span>
+                            <span className="home-cta__spinner" aria-hidden="true"></span>
+                        </button>
                     </nav>
                 </article>
             </section>

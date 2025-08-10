@@ -107,9 +107,49 @@
         padding: 8px 15px;
     }
   }
-  button:hover {
+  button:enabled:hover {
     color: white;
     border: 2px solid white;
-    background-color: #94c74809;
+    background-color: #5c8b3f;
+  }
+
+  button:disabled {
+    cursor: default;
+  }
+}
+
+.home-cta {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-cta__spinner {
+  position: absolute;
+  width: 1.3rem;
+  height: 1.3rem;
+  border: 0.2rem solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.is-loading .home-cta__spinner {
+  opacity: 1;
+  animation: spin 1.3s linear infinite;
+}
+
+.home-cta__label {
+  opacity: 1;
+}
+
+.is-loading .home-cta__label {
+  opacity: 0;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }

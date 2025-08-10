@@ -1,0 +1,38 @@
+.about-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    p {
+        color: white;
+        font-weight: 200;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        line-height: 2;
+
+        mark {
+            background: #4e4e94;
+            color: white;
+            font-weight: 300;
+            border-radius: 4px;
+            padding: 2px 4px;
+        }
+    }
+}
+
+.about-section-text {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.about-section-vid {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    padding: 20px;
+    background: #323940;
+    border-radius: 30px;
+}
