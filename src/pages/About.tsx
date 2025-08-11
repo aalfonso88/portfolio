@@ -1,17 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/about.css';
 import BottomNav from '../components/BottomNav';
 import AboutSection from '../components/AboutSection';
 
 const About = () => {
+
+    const tabs = ["ABOUT", "EDUCATION", "PROFESSIONAL", "INTERESTS", "CONTACT"];
+    const [activeTab, setActiveTab] = useState("ABOUT");
+
     return (<main>
         <div className="about">
             <nav className="about-tabs">
-                <button disabled className='tmp'>ABOUT</button>
-                <button>EDUCATION</button>
-                <button>PROFESSIONAL</button>
-                <button>INTERESTS</button>
-                <button>CONTACT</button>
+                {tabs.map((tab) => (
+                    <div
+                        key={tab}
+                        className={`tab-wrapper ${activeTab === tab ? "active" : ""}`}
+                    >
+                        <button disabled={activeTab === tab} onClick={() => setActiveTab(tab)}>{tab}</button>
+                    </div>
+                ))}
             </nav>
 
             <section className="about-content">
@@ -19,7 +26,7 @@ const About = () => {
             </section>
 
         </div>
-        <BottomNav />
+        {/*<BottomNav />*/}
     </main>
     );
 }

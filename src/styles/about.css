@@ -13,25 +13,52 @@
   gap: 15px;
 
   button {
-    background: none;
-    padding: 6px 15px;
-    color: white;
-    font-size: 1.2rem;
-    font-weight: 700;
-    border: none;
-    cursor: default;
-    transition: color 0.3s ease;
+
 
     &:hover:enabled {
       color: #94c748;
       cursor: pointer;
     }
   }
-  
-  .tmp {
-    background: #94c748;
+
+}
+
+.tab-wrapper {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+}
+
+.tab-wrapper button {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+  z-index: 9999;
+
+  &:disabled {
     color: black;
   }
+}
+
+.tab-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0;
+  background-color: #94c748;
+  transition: height 0.4s ease;
+  width: 100%;
+}
+
+.tab-wrapper.active::after {
+  height: 2rem;
 
 }
 

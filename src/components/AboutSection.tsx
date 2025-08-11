@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/about-section.css';
+import me from '../assets/photos/me-preview.png';
 
 const AboutSection = () => {
     return (
@@ -22,7 +23,10 @@ const AboutSection = () => {
                 </p>
             </div>
             <div className="about-section-vid">
-                DIV
+                <video controls poster={me}>
+                    <source src="/videos/demo.mp4" type="video/mp4" />
+                    Tu navegador no soporta video.
+                </video>
             </div>
         </main>
     );
