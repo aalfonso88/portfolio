@@ -3,6 +3,12 @@
   flex-direction: column;
   min-height: 80vh;
   width: 80vw;
+
+  @media (width < 768px) {
+    width: 95vw;
+    padding: 10px;
+    margin-top: 40vh;
+  }
 }
 
 .about-tabs {
@@ -13,12 +19,14 @@
   gap: 15px;
 
   button {
-
-
     &:hover:enabled {
       color: #94c748;
       cursor: pointer;
     }
+  }
+
+  @media (width < 768px) {
+    display: none;
   }
 
 }
@@ -53,7 +61,7 @@
   left: 0;
   height: 0;
   background-color: #94c748;
-  transition: height 0.4s ease;
+  transition: height 0.4s ease-out;
   width: 100%;
 }
 
@@ -63,10 +71,19 @@
 }
 
 .about-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
   flex: 1;
   background: #323940;
-  padding: 2rem;
   border-radius: 30px;
+  overflow: hidden;
+
+  @media (width < 768px) {
+    border-radius: 15px;
+  }
 }
 
 .about-bottom-nav {
