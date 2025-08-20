@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/about-section.css';
 import me from '../assets/photos/me-preview-wm.png';
+import demo from '../assets/vids/demo.mp4'
 
 const AboutSection = () => {
     return (
@@ -17,14 +18,14 @@ const AboutSection = () => {
                     This mix has been my biggest motivation.
                 </p>
                 <p>
-                    I was born and raised in <mark className='hl-text'>Montevideo, Uruguay, in 1988</mark>.
+                    I was born and raised in <mark className='hl-text'>Montevideo, Uruguay, in 1988.</mark><br />
                     With this simple portfolio, I want to give you a brief but clear idea of who I am and how I can help you on your projects. I hope we stay in touch and work together in the future.
-
                 </p>
+                <p>👉 To the right, you can find a short video presentation about me.</p>
             </div>
             <div className="about-section-vid">
                 <video controls poster={me}>
-                    <source src="/videos/demo.mp4" type="video/mp4" />
+                    <source src={demo} type="video/mp4" />
                 </video>
             </div>
         </main>

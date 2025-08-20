@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import '../styles/about.css';
+import '../styles/navigation.css';
 import BottomNav from '../components/BottomNav';
 import AboutSection from '../components/AboutSection';
+import EduSection from '../components/EduSection';
 
 const About = () => {
 
@@ -9,8 +10,8 @@ const About = () => {
     const [activeTab, setActiveTab] = useState("ABOUT");
 
     return (<main>
-        <div className="about">
-            <nav className="about-tabs">
+        <div className="navigation-container">
+            <nav className="navigation-tabs">
                 {tabs.map((tab) => (
                     <div
                         key={tab}
@@ -21,8 +22,9 @@ const About = () => {
                 ))}
             </nav>
 
-            <section className="about-content">
-                <AboutSection />
+            <section className="navigation-content">
+                {activeTab === "ABOUT" && <AboutSection />}
+                {activeTab === "EDUCATION" && <EduSection />}
             </section>
 
         </div>

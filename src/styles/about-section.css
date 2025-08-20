@@ -12,7 +12,7 @@
     p {
         color: white;
         font-weight: 200;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         letter-spacing: 1px;
         line-height: 2;
 
@@ -37,7 +37,7 @@
 }
 
 .about-section-text {
-    width: 50%;
+    width: 45%;
     padding: 30px;
 
     @media (width < 768px) {
@@ -52,8 +52,9 @@
     width: 40%;
     max-height: 600px;
     padding: 30px;
-    background: #323940;
     border-radius: 30px;
+
+    pointer-events: none;
 
     video {
         width: 100%;

@@ -1,6 +1,6 @@
 const BottomNav = () => {
     return (
-        <nav className="about-bottom-nav">
+        <nav className="navigation-bottom-nav">
             Íconos aquí
         </nav>
     );
