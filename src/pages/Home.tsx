@@ -1,7 +1,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 //import me from '../assets/photos/me.png';
-import me from '../assets/photos/me2.png';
+import me from '../assets/photos/me2.jpg';
 import '../styles/home.css';
 import { useNavigate } from 'react-router-dom';
 
