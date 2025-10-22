@@ -19,16 +19,16 @@ const AboutSection = () => {
                     </p>
                 </section>
                 <section>
-                    <span>What about now...</span>
+                    <span>What about me...</span>
                     <p>
-                        Since 2022 I work as a Full-Stack Developer, embarked in the exciting trip of developing useful, robust and user focus web applications.
+                        My name is <strong>Alexis</strong>. Since 2022 I work as a Full-Stack Developer, embarked in the exciting trip of developing useful, robust and user focus web applications.
                         This role implies a great mix of creativity and logical thinking, being my daily motivation.
                     </p>
                 </section>
                 <section>
                     <span>What’s next...</span>
                     <p>
-                        Click on play button to watch a short description of my next goals...
+                        Click on play to discover...
                     </p>
                     <div className='about-section-icon-play'>
                         <button><IconPlay /></button>
